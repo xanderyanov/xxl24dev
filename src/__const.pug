@@ -1,0 +1,48 @@
+mixin head
+  head
+    meta(charset='utf-8')
+    title= pageTitle
+    meta(name='keywords' content=seoKeywords)
+    meta(name='description' content=seoDesc)
+    meta(name='HandheldFriendly' content='True')
+    meta(name='MobileOptimized' content='320')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    //- meta(name="viewport" content="width=1280")
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='imagetoolbar' content='no')
+    meta(name='msthemecompatible' content='no')
+    meta(name='format-detection' content='telephone=no')
+    meta(name='format-detection' content='address=no')
+
+    link(rel='apple-touch-icon' sizes='57x57' href='/assets/img/fav/apple-icon-57x57.png')
+    link(rel='apple-touch-icon' sizes='60x60' href='/assets/img/fav/apple-icon-60x60.png')
+    link(rel='apple-touch-icon' sizes='72x72' href='/assets/img/fav/apple-icon-72x72.png')
+    link(rel='apple-touch-icon' sizes='76x76' href='/assets/img/fav/apple-icon-76x76.png')
+    link(rel='apple-touch-icon' sizes='114x114' href='/assets/img/fav/apple-icon-114x114.png')
+    link(rel='apple-touch-icon' sizes='120x120' href='/assets/img/fav/apple-icon-120x120.png')
+    link(rel='apple-touch-icon' sizes='144x144' href='/assets/img/fav/apple-icon-144x144.png')
+    link(rel='apple-touch-icon' sizes='152x152' href='/assets/img/fav/apple-icon-152x152.png')
+    link(rel='apple-touch-icon' sizes='180x180' href='/assets/img/fav/apple-icon-180x180.png')
+    link(rel='icon' type='image/png' sizes='192x192' href='/assets/img/fav/android-icon-192x192.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='/assets/img/fav/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='96x96' href='/assets/img/fav/favicon-96x96.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='/assets/img/fav/favicon-16x16.png')
+    link(rel='manifest' href='/assets/img/fav/manifest.json')
+    meta(name='msapplication-TileColor' content='#ffffff')
+    meta(name='msapplication-TileImage' content='/assets/img/fav/ms-icon-144x144.png')
+    meta(name='theme-color' content='#ffffff')
+
+    meta(property='og:url' content='https://btl-image.ru')
+    meta(property='og:type' content='website')
+    meta(property='og:title' content=pageTitle)
+    meta(property='og:description' content=seoDesc)
+    meta(property='og:image' content='/assets/img/og-img.jpg')
+
+    link(rel='stylesheet' href='/assets/css/vendors.css').
+    link(rel='stylesheet' href='/assets/css/app.css').
+
+
+mixin scripts
+  script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+  script(src='/assets/js/vendors.js')
+  script(src='/assets/js/app.js')
