@@ -48,13 +48,11 @@ gulp.task('less', function () {
 
 
 var vendorsCssFiles = [
-  'src/assets/vendors/sweetalert.css',
-  'src/assets/vendors/nouislider.min.css',
-  'src/assets/vendors/swiper-bundle.min.css',
-  'src/assets/vendors/fancybox4/ui/dist/fancybox.css',
-  'src/assets/vendors/bootstrap.css',
-  // 'src/assets/libs/bootstrap5/mod/bootstrap.min.css',
-  //'src/assets/libs/bootstrap-icons.css',
+  'node_modules/sweetalert/dist/sweetalert.css',
+  'node_modules/swiper/swiper-bundle.min.css',
+  // 'node_modules/bootstrap/dist/css/bootstrap.min.css',
+  'node_modules/font-awesome/css/font-awesome.min.css',
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
 ];
 
 gulp.task('vendorsCss', function () {
@@ -95,14 +93,12 @@ gulp.task('webp', function () {
 });
 
 var vendorsJsFiles = [
-  'src/assets/vendors/jquery.min.js',
-  // "src/assets/vendors/bootstrap.min.js",
-  // 'src/assets/libs/bootstrap5/dist/js/bootstrap.min.js',
-  'src/assets/vendors/jquery.fancybox.min.js',
-  // 'src/assets/vendors/fancybox4/ui/dist/fancybox.umd.js',
-  'src/assets/vendors/jquery.maskedinput.js',
-  'src/assets/vendors/sweetalert.min.js',
-  'src/assets/vendors/swiper-bundle.min.js',
+  'node_modules/jquery/dist/jquery.min.js',
+  // 'node_modules/bootstrap/dist/js/bootstrap.min.js',
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+  'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+  'node_modules/sweetalert/dist/sweetalert.min.js',
+  'node_modules/swiper/swiper-bundle.min.js',
 ];
 
 gulp.task('vendorsJs', function () {
@@ -120,7 +116,7 @@ gulp.task('vendorsJs', function () {
 });
 
 var myjsfiles = [
-  'src/assets/js/__main.js',
+  'src/assets/js/main.js',
 
   'src/assets/js/__resize.js',
 ];
@@ -171,13 +167,12 @@ gulp.task(
   gulp.series(
     'clean',
     gulp.parallel(
-      'css',
+      'less',
       'vendorsCss',
       'pug',
       'image',
       'vendorsJs',
       'myJs',
-      'icomoon',
       'fonts'
       // 'video',
     )
