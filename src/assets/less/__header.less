@@ -129,12 +129,87 @@ ul.topMenu {
   display: flex;
 }
 
+ul.topMenu li {
+  list-style: none;
+}
+
 ul.topMenu>li {
   display: flex;
-  list-style: none;
+  margin-right: 40px;
+}
+
+ul.topMenu>li:last-child {
+  margin-right: 0;
+}
+
+ul.topMenu>li>a {
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--color1);
+  transition: all .3s;
+  padding: 10px 0;
+}
+
+ul.topMenu>li:hover>a {
+  color: var(--hover1);
+}
+
+ul.topMenu>li>a {
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+
+
+ul.topMenu>li.hasInner>a::after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  margin-left: 8px;
+  color: var(--color1);
+  transition: all .3s;
+}
+
+ul.topMenu>li.hasInner:hover>a::after {
+  color: var(--hover1);
 }
 
 
 ul.topMenu ul {
   display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  padding: 30px 40px;
+  background-color: #fff;
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+ul.topMenu>li.hasInner:hover ul {
+  display: block;
+}
+
+ul.topMenu ul li {
+  margin-bottom: 10px;
+}
+
+ul.topMenu ul li:last-child {
+  margin-bottom: 0;
+}
+
+ul.topMenu ul a {
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--color1);
+  transition: all .3s;
+}
+
+ul.topMenu ul a:hover {
+  color: var(--hover1);
 }
