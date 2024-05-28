@@ -1,0 +1,12 @@
+mixin saleLeaders
+  .catalog__area 
+    .w
+      .block__title 
+        h2 Лидеры продаж
+    .catalog.w 
+      each item in catalog1
+        .card(id=item.id)
+          .card__img
+            img(src="https://mirchasov64.ru/assets/images/products/"+item.id+"/"+item.img, alt=item.title)
+          .card__info 
+            .card__title!= item.title
