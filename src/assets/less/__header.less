@@ -11,7 +11,7 @@
 }
 
 .topLine__left {
-  padding: 10px;
+  padding: 10px 10px 10px 0;
 }
 
 .topLine__right {
@@ -23,11 +23,12 @@
   display: flex;
   align-items: center;
   padding: 12px 20px;
+  border-right: 1px solid var(--gray);
 }
 
-.topLine__btn:not(:first-child) {
-  border-left: 1px solid var(--gray);
-}
+// .topLine__btn:not(:first-child) {
+//   border-right: 1px solid var(--gray);
+// }
 
 .topLine__btnElem {
   display: flex;
@@ -39,7 +40,7 @@
 }
 
 .topLine__btnElem:hover {
-  color: #f00;
+  color: var(--hover1);
 }
 
 .topLine__btnElem:not(:first-child) {
@@ -61,7 +62,60 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #738ea2;
+  background: var(--color1);
   color: #fff;
   border-radius: 50%;
+}
+
+.header__area {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.logo1 {
+  position: relative;
+  width: 150px;
+}
+
+.logo1 img {
+  display: block;
+  width: 100%;
+}
+
+.header__cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__contEl {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--color1);
+}
+
+.header__contEl:hover {
+  color: var(--hover1);
+}
+
+.header__contEl:last-child {
+  margin-bottom: 0;
+}
+
+.header__contEl i {
+  font-size: 1.25rem;
+}
+
+.header__contEl span {
+  margin-left: 10px;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
