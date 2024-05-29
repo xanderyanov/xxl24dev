@@ -140,6 +140,12 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('build/assets/fonts'));
 });
 
+gulp.task('font-awesome', function () {
+  return gulp
+    .src('node_modules/font-awesome/fonts/**/*.*')
+    .pipe(gulp.dest('build/node_modules/font-awesome/fonts'));
+});
+
 // gulp.task('bicons', function () {
 //   return gulp
 //     .src('src/assets/libs/bootstrap-icons.css')
@@ -173,7 +179,8 @@ gulp.task(
       'image',
       'vendorsJs',
       'myJs',
-      'fonts'
+      'fonts',
+      'font-awesome'
       // 'video',
     )
   )
