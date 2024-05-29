@@ -1,0 +1,311 @@
+mixin filters 
+  .filters__area
+    .filters__openBtn 
+      span Фильтры
+    .filters__content
+      .filters
+        .filter 
+          .filter__name Новинка:
+          .filter__content
+            .checkBoxElement
+              input.myFilter(type="checkbox"  value="" id="FlagNew" data-id="FlagNew" data-filter="FlagNew=true" data-val="filter")
+              label(for="FlagNew") Новинка
+        .filter 
+          .filter__name Склады:
+          .filter__content
+            .checkBoxElement
+              input.form-check-input.myFilter(type="checkbox"  value="" id="OnSkladHM" data-id="OnSkladHM" data-filter="OnSkladHM=true" data-val="filter")
+              label.form-check-label(for="OnSkladHM") Хеппи-Молл
+            .checkBoxElement
+              input.form-check-input.myFilter(type="checkbox"  value="" id="OnSkladGL" data-id="OnSkladGL" data-filter="OnSkladGL=true" data-val="filter")
+              label.form-check-label(for="OnSkladGL") Глобус
+            .checkBoxElement
+              input.form-check-input.myFilter(type="checkbox"  value="" id="OnSkladLZ" data-id="OnSkladLZ" data-filter="OnSkladLZ=true" data-val="filter")
+              label.form-check-label(for="OnSkladLZ") Лазурный
+
+//- <div class="col-3">
+//-         <h3>Склады:</h3>
+//-         <div class="mb-2">
+//-         <div class="form-check">
+//-             <input class="form-check-input myFilter" type="checkbox"  value="" id="OnSkladHM" data-id="OnSkladHM" data-filter="OnSkladHM=true" data-val="filter">
+//-             <label class="form-check-label" for="">
+//-                 Хеппи-Молл
+//-             </label>
+//-         </div>
+//-         <div class="form-check">
+//-             <input class="form-check-input myFilter" type="checkbox"  value="" id="OnSkladGL" data-id="OnSkladGL" data-filter="OnSkladGL=true" data-val="filter">
+//-             <label class="form-check-label" for="">
+//-                 Глобус
+//-             </label>
+//-         </div>
+//-         <div class="form-check">
+//-             <input class="form-check-input myFilter" type="checkbox"  value="" id="OnSkladLZ" data-id="OnSkladLZ" data-filter="OnSkladLZ=true" data-val="filter">
+//-             <label class="form-check-label" for="">
+//-                 Лазурный
+//-             </label>
+//-         </div>
+//-         <div class="form-check">
+//-             <input class="form-check-input myFilter" type="checkbox"  value="" id="OnSkladOR" data-id="OnSkladOR" data-filter="OnSkladOR=true" data-val="filter">
+//-             <label class="form-check-label" for="">
+//-                 Оранжевый
+//-             </label>
+//-         </div>
+//-         <div class="form-check">
+//-             <input class="form-check-input myFilter" type="checkbox"  value="" id="OnSkladPZ" data-id="OnSkladPZ" data-filter="OnSkladPZ=true" data-val="filter">
+//-             <label class="form-check-label" for="">
+//-                 Пассаж
+//-             </label>
+//-         </div>
+//-         <div class="form-check">
+//-             <input class="form-check-input myFilter" type="checkbox"  value="" id="OnSkladTA" data-id="OnSkladTA" data-filter="OnSkladTA=true" data-val="filter">
+//-             <label class="form-check-label" for="">
+//-                 Тау-Галерея
+//-             </label>
+//-         </div>
+//-         </div>
+//-             <h3>Пол:</h3>
+//-         <div class="mb-2">
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Женские" data-id="Женские" data-filter="Gender=0JbQtdC90YHQutC40LU*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Женские
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Мужские" data-id="Мужские" data-filter="Gender=0JzRg9C20YHQutC40LU*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Мужские
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Унисекс" data-id="Унисекс" data-filter="Gender=0KPQvdC40YHQtdC60YE*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Унисекс
+//-                     </label>
+//-                 </div>
+//-         </div>
+//-             <h3>Тип механизма:</h3>
+//-         <div class="mb-2">
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Кварцевый" data-id="Кварцевый" data-filter="MechanismType=0JrQstCw0YDRhtC10LLRi9C5" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Кварцевый
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Кварцевый на солнечной батарее" data-id="Кварцевый на солнечной батарее" data-filter="MechanismType=0JrQstCw0YDRhtC10LLRi9C5INC90LAg0YHQvtC70L3QtdGH0L3QvtC5INCx0LDRgtCw0YDQtdC1" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Кварцевый на солнечной батарее
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Солнечная батарея" data-id="Солнечная батарея" data-filter="MechanismType=0KHQvtC70L3QtdGH0L3QsNGPINCx0LDRgtCw0YDQtdGP" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Солнечная батарея
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Механический с автоподзаводом" data-id="Механический с автоподзаводом" data-filter="MechanismType=0JzQtdGF0LDQvdC40YfQtdGB0LrQuNC5INGBINCw0LLRgtC-0L_QvtC00LfQsNCy0L7QtNC-0Lw*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Механический с автоподзаводом
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Механический с ручным заводом" data-id="Механический с ручным заводом" data-filter="MechanismType=0JzQtdGF0LDQvdC40YfQtdGB0LrQuNC5INGBINGA0YPRh9C90YvQvCDQt9Cw0LLQvtC00L7QvA**" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Механический с ручным заводом
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Механические&#x2B;кварцевые" data-id="Механические&#x2B;кварцевые" data-filter="MechanismType=0JzQtdGF0LDQvdC40YfQtdGB0LrQuNC1K9C60LLQsNGA0YbQtdCy0YvQtQ**" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Механические&#x2B;кварцевые
+//-                     </label>
+//-                 </div>
+//-         </div>
+//-             <h3>Форма корпуса:</h3>
+//-         <div class="mb-2">
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Круг" data-id="Круг" data-filter="CaseForm=0JrRgNGD0LM*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Круг
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Прямоугольник" data-id="Прямоугольник" data-filter="CaseForm=0J_RgNGP0LzQvtGD0LPQvtC70YzQvdC40Lo*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Прямоугольник
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Квадрат" data-id="Квадрат" data-filter="CaseForm=0JrQstCw0LTRgNCw0YI*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Квадрат
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Бочка" data-id="Бочка" data-filter="CaseForm=0JHQvtGH0LrQsA**" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Бочка
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Необычный" data-id="Необычный" data-filter="CaseForm=0J3QtdC-0LHRi9GH0L3Ri9C5" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Необычный
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Овал" data-id="Овал" data-filter="CaseForm=0J7QstCw0Ls*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Овал
+//-                     </label>
+//-                 </div>
+//-         </div>
+//-             <h3>Материал корпуса:</h3>
+//-         <div class="mb-2">
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Сталь с PVD покрытием" data-id="Сталь с PVD покрытием" data-filter="CaseMaterial=0KHRgtCw0LvRjCDRgSBQVkQg0L_QvtC60YDRi9GC0LjQtdC8" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Сталь с PVD покрытием
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Керамика, Сталь с IP покрытием" data-id="Керамика, Сталь с IP покрытием" data-filter="CaseMaterial=0JrQtdGA0LDQvNC40LrQsCwg0KHRgtCw0LvRjCDRgSBJUCDQv9C-0LrRgNGL0YLQuNC10Lw*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Керамика, Сталь с IP покрытием
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Сталь с розовым IP покрытием" data-id="Сталь с розовым IP покрытием" data-filter="CaseMaterial=0KHRgtCw0LvRjCDRgSDRgNC-0LfQvtCy0YvQvCBJUCDQv9C-0LrRgNGL0YLQuNC10Lw*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Сталь с розовым IP покрытием
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Керамика, Сталь" data-id="Керамика, Сталь" data-filter="CaseMaterial=0JrQtdGA0LDQvNC40LrQsCwg0KHRgtCw0LvRjA**" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Керамика, Сталь
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Нержавеющая сталь " data-id="Нержавеющая сталь " data-filter="CaseMaterial=0J3QtdGA0LbQsNCy0LXRjtGJ0LDRjyDRgdGC0LDQu9GMIA**" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Нержавеющая сталь 
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Сталь с IP покрытием" data-id="Сталь с IP покрытием" data-filter="CaseMaterial=0KHRgtCw0LvRjCDRgSBJUCDQv9C-0LrRgNGL0YLQuNC10Lw*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Сталь с IP покрытием
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Сталь с частичным PVD покрытием" data-id="Сталь с частичным PVD покрытием" data-filter="CaseMaterial=0KHRgtCw0LvRjCDRgSDRh9Cw0YHRgtC40YfQvdGL0LwgUFZEINC_0L7QutGA0YvRgtC40LXQvA**" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Сталь с частичным PVD покрытием
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Сталь с розовым PVD покрытием, эмаль" data-id="Сталь с розовым PVD покрытием, эмаль" data-filter="CaseMaterial=0KHRgtCw0LvRjCDRgSDRgNC-0LfQvtCy0YvQvCBQVkQg0L_QvtC60YDRi9GC0LjQtdC8LCDRjdC80LDQu9GM" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Сталь с розовым PVD покрытием, эмаль
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Сталь с желтым IP покрытием" data-id="Сталь с желтым IP покрытием" data-filter="CaseMaterial=0KHRgtCw0LvRjCDRgSDQttC10LvRgtGL0LwgSVAg0L_QvtC60YDRi9GC0LjQtdC8" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Сталь с желтым IP покрытием
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Сталь с частичным IP покрытием" data-id="Сталь с частичным IP покрытием" data-filter="CaseMaterial=0KHRgtCw0LvRjCDRgSDRh9Cw0YHRgtC40YfQvdGL0LwgSVAg0L_QvtC60YDRi9GC0LjQtdC8" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Сталь с частичным IP покрытием
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Пластик, сталь" data-id="Пластик, сталь" data-filter="CaseMaterial=0J_Qu9Cw0YHRgtC40LosINGB0YLQsNC70Yw*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Пластик, сталь
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Пластик" data-id="Пластик" data-filter="CaseMaterial=0J_Qu9Cw0YHRgtC40Lo*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Пластик
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Пластик, карбон" data-id="Пластик, карбон" data-filter="CaseMaterial=0J_Qu9Cw0YHRgtC40LosINC60LDRgNCx0L7QvQ**" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Пластик, карбон
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Титан" data-id="Титан" data-filter="CaseMaterial=0KLQuNGC0LDQvQ**" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Титан
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Латунь PVD покрытием" data-id="Латунь PVD покрытием" data-filter="CaseMaterial=0JvQsNGC0YPQvdGMIFBWRCDQv9C-0LrRgNGL0YLQuNC10Lw*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Латунь PVD покрытием
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Алюминий, пластик" data-id="Алюминий, пластик" data-filter="CaseMaterial=0JDQu9GO0LzQuNC90LjQuSwg0L_Qu9Cw0YHRgtC40Lo*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Алюминий, пластик
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Латунь" data-id="Латунь" data-filter="CaseMaterial=0JvQsNGC0YPQvdGM" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Латунь
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Алюминий с PVD покрытием" data-id="Алюминий с PVD покрытием" data-filter="CaseMaterial=0JDQu9GO0LzQuNC90LjQuSDRgSBQVkQg0L_QvtC60YDRi9GC0LjQtdC8" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Алюминий с PVD покрытием
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Алюминевый сплав" data-id="Алюминевый сплав" data-filter="CaseMaterial=0JDQu9GO0LzQuNC90LXQstGL0Lkg0YHQv9C70LDQsg**" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Алюминевый сплав
+//-                     </label>
+//-                 </div>
+//-         </div>
+//-             <h3>Стекло:</h3>
+//-         <div class="mb-2">
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Минеральное" data-id="Минеральное" data-filter="Glass=0JzQuNC90LXRgNCw0LvRjNC90L7QtQ**" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Минеральное
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Органическое" data-id="Органическое" data-filter="Glass=0J7RgNCz0LDQvdC40YfQtdGB0LrQvtC1" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Органическое
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Сапфировое" data-id="Сапфировое" data-filter="Glass=0KHQsNC_0YTQuNGA0L7QstC-0LU*" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Сапфировое
+//-                     </label>
+//-                 </div>
+//-                 <div class="form-check">
+//-                     <input class="form-check-input myFilter" type="checkbox"  value="" id="Минеральное с сапфировым напылением" data-id="Минеральное с сапфировым напылением" data-filter="Glass=0JzQuNC90LXRgNCw0LvRjNC90L7QtSDRgSDRgdCw0L_RhNC40YDQvtCy0YvQvCDQvdCw0L_Ri9C70LXQvdC40LXQvA**" data-val="filter">
+//-                     <label class="form-check-label" for="">
+//-                         Минеральное с сапфировым напылением
+//-                     </label>
+//-                 </div>
+//-         </div>
+//-         <div class="btn btn-primary JS_Filters_run">Показать результаты</div>
+//-     </div>
+//- </div>
