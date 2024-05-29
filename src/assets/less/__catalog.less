@@ -4,8 +4,16 @@
 
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
   gap: 20px;
+}
+
+.catalog_wide {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.catalog_content {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .card__outer {
@@ -107,4 +115,112 @@
 
 .card__buyBtn:hover {
   background: var(--hover1);
+}
+
+
+/***************************/
+
+.catTtile__area {
+  width: 100%;
+  background: var(--light);
+  margin-bottom: 20px;
+}
+
+.catTtile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.catTtile h1 {
+  margin: 0;
+}
+
+.catTtile__breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catTtile__breadcrumbs span {
+  margin: 0 10px;
+}
+
+.catTtile__breadcrumbs a {
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.catTtile__breadcrumbs a:hover {
+  color: var(--hover1);
+}
+
+/*******************************/
+
+.sortBtnsArea {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.sortTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color1);
+}
+
+.sortBtn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #000;
+}
+
+.sortBtn:hover {
+  color: var(--hover1);
+}
+
+.sortBtn:not(:first-child) {
+  margin-left: 20px;
+}
+
+.sortBtn i {
+  font-size: 1.125rem;
+  margin-left: 8px;
+}
+
+/****************************/
+
+.leftMenu__area {
+  position: relative;
+}
+
+.leftMenu {
+  list-style: none;
+  width: 100%;
+}
+
+.leftMenu li {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.leftMenu li a {
+  display: flex;
+  padding: 10px 20px;
+  text-decoration: none;
+  background: var(--light);
+  color: var(--color1);
+  font-size: 1.25rem;
+  transition: all .2s;
+}
+
+.leftMenu li.active a {
+  background: var(--color1);
+  color: #fff;
+}
+
+.leftMenu li a:hover {
+  background: var(--color2);
+  color: #fff;
 }

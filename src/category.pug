@@ -1,0 +1,39 @@
+- var pageTitle = 'Категория'
+- var seoKeywords = 'Ключевые слова для страницы'
+- var seoDesc = 'Сео описание для страницы'
+
+include __const
+include __header
+include __face
+include __catalog
+
+
+<!DOCTYPE html>
+html(lang="ru-RU")
++head
+body
+  .site 
+    .site__header 
+      +header
+      
+    .site__content 
+      .catTtile__area 
+        .catTtile.ww
+          .catTtile__breadcrumbs 
+            a(href="") Каталог
+            span /
+            a(href="") Наручные часы
+          h1 Casio
+
+      .splitCols.ww
+        .menuCol 
+          +leftMenu
+        .contentCol
+          +sortBtn
+          +catalog
+
+    .site__footer
+
+
+  +scripts
+

@@ -3,12 +3,12 @@ mixin saleLeaders
     .w
       .block__title 
         h2 Лидеры продаж
-    .catalog.w 
+    .catalog.catalog_wide.w 
       each item in catalog1
         .card(id=item.id)
           .card__icons  
             //- span.percentIcon.fa.fa-percent
-            span.saleLeaderIcon.fa.fa-thermometer-full(title="Лидер продаж")
+            span.saleLeaderIcon.icon-thermometer(title="Лидер продаж")
           .card__fav 
             span.icon-eheart3
             //- span.icon-eheart3fill
@@ -25,7 +25,7 @@ mixin saleLeaders
         .card(id=item.id)
           .card__icons  
             span.percentIcon.icon-percentage
-            //- span.saleLeaderIcon.fa.fa-thermometer-full(title="Лидер продаж")
+            //- span.saleLeaderIcon.icon-thermometer(title="Лидер продаж")
           .card__fav 
             //- span.icon-eheart3
             span.icon-eheart3fill
@@ -38,3 +38,104 @@ mixin saleLeaders
             | !{' '}Р
             //-span.fa.fa-rub
           .card__buyBtn Купить
+
+mixin catalog
+  .catalog.catalog_content
+    each item in catalog1
+      .card(id=item.id)
+        .card__icons  
+          //- span.percentIcon.fa.fa-percent
+          span.saleLeaderIcon.icon-thermometer(title="Лидер продаж")
+        .card__fav 
+          span.icon-eheart3
+          //- span.icon-eheart3fill
+        .card__img
+          img(src="https://mirchasov64.ru/assets/images/products/"+item.id+"/"+item.img, alt=item.title)
+        .card__info 
+          .card__title!= item.title
+        .card__priceArea
+          span.price!= item.price 
+          | !{' '}Р
+          //-span.fa.fa-rub
+        .card__buyBtn Купить
+    each item in catalog1
+      .card(id=item.id)
+        .card__icons  
+          span.percentIcon.icon-percentage
+          //- span.saleLeaderIcon.icon-thermometer(title="Лидер продаж")
+        .card__fav 
+          //- span.icon-eheart3
+          span.icon-eheart3fill
+        .card__img
+          img(src="https://mirchasov64.ru/assets/images/products/"+item.id+"/"+item.img, alt=item.title)
+        .card__info 
+          .card__title!= item.title
+        .card__priceArea
+          span.price!= item.price 
+          | !{' '}Р
+          //-span.fa.fa-rub
+        .card__buyBtn Купить
+
+mixin sortBtn 
+  .sortBtnsArea
+    .sortTitle Сортировка:
+    .sortBtn
+      span по имени
+      i.icon-sort-amount-asc
+    .sortBtn
+      span по цене
+      i.icon-sort-amount-desc
+
+mixin leftMenu 
+  .leftMenu__area 
+    ul.leftMenu 
+      li
+        a(href='#') Adriatica
+      li
+        a(href='#') Anne Klein
+      li
+        a(href='#') Armani Exchange
+      li
+        a(href='#') Beverly Hills Polo Club
+      li
+        a(href='#') Candino
+      li.active
+        a(href='#') Casio
+      li
+        a(href='#') COVER
+      li
+        a(href='#') Daniel Klein
+      li
+        a(href='#') Danish Design
+      li
+        a(href='#') Diesel
+      li
+        a(href='#') DKNY
+      li
+        a(href='#') Elixa
+      li
+        a(href='#') Essence
+      li
+        a(href='#') Fossil
+      li
+        a(href='#') Greenwich
+      li
+        a(href='#') GUARDO
+      li
+        a(href='#') GUESS
+      li
+        a(href='#') Jacques Lemans
+      li
+        a(href='#') Kenneth Cole
+      li
+        a(href='#') Lee Cooper
+      li
+        a(href='#') LEVEL
+      li
+        a(href='#') MORGAN
+      li
+        a(href='#') Obaku
+      li
+        a(href='#') OMAX
+      li
+        a(href='#') Orient
