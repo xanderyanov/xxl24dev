@@ -9,6 +9,9 @@ mixin saleLeaders
           .card__icons  
             //- span.percentIcon.fa.fa-percent
             span.saleLeaderIcon.fa.fa-thermometer-full(title="Лидер продаж")
+          .card__fav 
+            span.icon-eheart3
+            //- span.icon-eheart3fill
           .card__img
             img(src="https://mirchasov64.ru/assets/images/products/"+item.id+"/"+item.img, alt=item.title)
           .card__info 
@@ -21,8 +24,11 @@ mixin saleLeaders
       each item in catalog1
         .card(id=item.id)
           .card__icons  
-            span.percentIcon.fa.fa-percent
+            span.percentIcon.icon-percentage
             //- span.saleLeaderIcon.fa.fa-thermometer-full(title="Лидер продаж")
+          .card__fav 
+            //- span.icon-eheart3
+            span.icon-eheart3fill
           .card__img
             img(src="https://mirchasov64.ru/assets/images/products/"+item.id+"/"+item.img, alt=item.title)
           .card__info 

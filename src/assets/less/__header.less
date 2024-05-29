@@ -52,6 +52,10 @@
   border-left: 2px solid #000;
 }
 
+.topLine__btnElem i {
+  font-size: 1.125rem;
+}
+
 .topLine__btnElem span {
   font-size: 0.875rem;
   margin-left: 8px;
@@ -59,8 +63,8 @@
 
 .cartCount {
   position: absolute;
-  top: -6px;
-  right: 1px;
+  top: -5px;
+  right: 0px;
   font-size: 0.625rem;
   width: 16px;
   height: 16px;
@@ -116,7 +120,7 @@
 }
 
 .header__contEl i {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .header__contEl span {
@@ -156,6 +160,7 @@ ul.topMenu>li>a {
   transition: all .3s;
   padding: 10px 0;
   font-family: "Comfortaa", sans-serif;
+  position: relative;
 }
 
 ul.topMenu>li:hover>a {
@@ -168,15 +173,21 @@ ul.topMenu>li>a {
   text-decoration: none;
 }
 
+ul.topMenu>li.hasInner>a {
+  padding: 10px 25px 10px 0;
+}
+
 
 
 ul.topMenu>li.hasInner>a::after {
-  content: "\f107";
-  font-family: "FontAwesome";
-  font-size: 20px;
-  line-height: 20px;
+  position: absolute;
+  right: 0;
+  top: 13px;
+  content: "\e946";
+  font-family: "Icomoon";
+  font-size: 18px;
+  line-height: 1;
   color: #333;
-  margin: 5px 0 0 8px;
   color: var(--color1);
   transition: all .3s;
 }

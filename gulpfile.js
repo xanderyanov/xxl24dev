@@ -152,11 +152,11 @@ gulp.task('font-awesome', function () {
 //     .pipe(gulp.dest('build/assets/css'));
 // });
 
-// gulp.task('icomoon', function () {
-//   return gulp
-//     .src('src/assets/icomoon/**/*.*')
-//     .pipe(gulp.dest('build/btlclinic/icomoon'));
-// });
+gulp.task('icomoon', function () {
+  return gulp
+    .src('src/assets/icomoon/fonts/*.*')
+    .pipe(gulp.dest('build/assets/icomoon'));
+});
 
 // gulp.task('video', function () {
 //   return gulp
@@ -180,6 +180,7 @@ gulp.task(
       'vendorsJs',
       'myJs',
       'fonts',
+      'icomoon',
       'font-awesome'
       // 'video',
     )
