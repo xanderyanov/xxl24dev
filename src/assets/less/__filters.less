@@ -18,6 +18,7 @@
   margin-right: 10px;
   font-size: 20px;
   color: #fff;
+  font-weight: 500;
 }
 
 .filters__openBtn::after {
@@ -32,8 +33,12 @@
   transition: all .3s;
 }
 
+.filters__openBtn.active::after {
+  content: "\e927";
+}
+
 .filters__content {
-  display: block;
+  display: none;
   padding: 10px 20px;
   background: fade(@baseColor, 20%);
 }
@@ -77,4 +82,20 @@
 .checkBoxElement label:hover {
   color: var(--hover1);
   font-weight: 500;
+}
+
+.filtersRunBtn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--color1);
+  text-align: center;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.filtersRunBtn:hover {
+  background-color: var(--hover1);
 }

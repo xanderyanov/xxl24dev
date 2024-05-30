@@ -18,6 +18,8 @@ function initVars() {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
+
+
 $(function () {
   initVars();
 
@@ -68,7 +70,19 @@ $(function () {
     return false;
   });
 
-  
+  $(".filters__openBtn").on("click", function(e){
+    e.preventDefault();
+    var $this = $(this);
+		if ($this.hasClass("active")) {
+			$this.removeClass("active");
+			$(".filters__content").slideUp(200);
+		} else {
+      $this.addClass("active");
+			$(".filters__content").slideDown(200);
+		}
+	});
+
+})
 
 //################ likeBlock
 

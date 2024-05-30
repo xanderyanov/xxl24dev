@@ -4,6 +4,7 @@
 
 include __const
 include __header
+include __footer
 include __face
 include __catalog
 include __filters
@@ -26,7 +27,7 @@ body
             a(href="") Наручные часы
           h1 Casio
 
-      .splitCols.ww
+      .splitCols.ww.area
         .menuCol 
           +filters
           +leftMenu
@@ -35,6 +36,7 @@ body
           +catalog
 
     .site__footer
+      +footer
 
 
   +scripts
