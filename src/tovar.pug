@@ -1,0 +1,29 @@
+- var pageTitle = 'Страница одного товара'
+- var seoKeywords = 'Ключевые слова для страницы'
+- var seoDesc = 'Сео описание для страницы'
+
+include __const
+include __header
+include __footer
+include __face
+include __catalog
+include __tovar
+
+
+<!DOCTYPE html>
+html(lang="ru-RU")
++head
+body
+  .site 
+    .site__header 
+      +header
+      
+    .site__content 
+      +tovar
+
+
+    .site__footer
+      +footer
+
+  +scripts
+
